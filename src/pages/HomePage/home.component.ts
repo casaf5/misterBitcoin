@@ -12,7 +12,7 @@ import { THIS_EXPR, IfStmt } from '@angular/compiler/src/output/output_ast';
 })
 export class HomeComponent implements OnInit {
   user: User;
-  currRate: number = 0.00008587;
+  currRate: number;
   constructor(
     private userService: UserService,
     private bitcoinService: BitcoinService
@@ -23,10 +23,10 @@ export class HomeComponent implements OnInit {
       .subscribe((value) => (this.currRate = value));
   }
   get lastMoves() {
-    return this.user.moves.slice(this.user.moves.length - 3);
+    return this.user.moves.slice(0,3);
   }
   ngOnInit(): void {
     this.user = this.userService.loggedUser
-    // this.getCurrRate()
+    this.getCurrRate()
   }
 }

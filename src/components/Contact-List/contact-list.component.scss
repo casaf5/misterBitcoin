@@ -1,9 +1,17 @@
 ul.contact-list {
   padding: 0;
-  margin: 0;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 10px;
+  height: 100%;
+  width: 70%;
   li {
     border: 1px solid #1a4a97;
-    width: 300px;
+    width: 200px;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
@@ -11,22 +19,82 @@ ul.contact-list {
     cursor: pointer;
     font-family: "Roboto", sans-serif;
     transition: all 0.3s ease-in-out;
-    span {
-      margin-left: 10px;
-    }
     i {
       transition: all 0.1s ease-in-out;
       color: lightgrey;
+      margin: 10px;
       &:hover {
         transform: scale(1.2);
-        color:black;
+        color: black;
       }
     }
-
     &:hover {
       background-color: #1a4a97;
       span {
         color: white;
+      }
+    }
+    a {
+      ngx-avatar {
+        align-self: center;
+        margin: 10px;
+        display: none;
+        .desktop-view {
+          display: block;
+        }
+      }
+      img{
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        align-self: center;
+      }
+    }
+  }
+}
+.contact-list {
+  a {
+    display: flex;
+    justify-content: center;
+    button {
+      width: 360px;
+      height: 50px;
+      border: 1px solid #1a4a97;
+      background-color: transparent;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+      &:hover {
+        background-color: #3498db;
+        color: white;
+      }
+      i {
+        padding: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  ul.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    li {
+      width: 300px;
+      a {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .mobile-view {
+          display: block;
+        }
+        .desktop-view {
+          display: none;
+        }
       }
     }
   }

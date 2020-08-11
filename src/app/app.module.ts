@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ContactFilterComponent } from '../components/ContactFilter/contact-filter.component';
 import { ContactListComponent } from '../components/contact-list/contact-list.component';
 import { ContactPreviewComponent } from '../components/contact-preview/contact-preview.component';
-import { InputComponent } from '../components/input/input.component';
 import { HomeComponent } from '../pages/HomePage/home.component';
 import { ContactComponent } from '../pages/ContactPage/contact.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -34,7 +33,6 @@ import { AvatarModule } from 'ngx-avatar';
     ContactFilterComponent,
     ContactListComponent,
     ContactPreviewComponent,
-    InputComponent,
     HomeComponent,
     ContactComponent,
     AppheaderComponent,

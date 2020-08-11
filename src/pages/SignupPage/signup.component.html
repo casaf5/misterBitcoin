@@ -1,8 +1,10 @@
-<section class="signup-page">
-  <input type="text" placeholder="Enter your name.." [(ngModel)]="username" />
+<section class="signup-page flex col">
+  <h1>Sign Up<i class="fas fa-user-plus"></i></h1>
+  <input type="text" placeholder="Enter your name.." [(ngModel)]="registerUser" />
   <button (click)="signup()">Sign Up</button>
   <hr>
-  <h1>Or Login:</h1>
-  <input type="text" placeholder="Enter your name.." [(ngModel)]="username" />
+  <h1>Login<i class="fas fa-sign-in-alt"></i></h1>
+  <input type="text" placeholder="Enter your name.." [(ngModel)]="loginUser" />
   <button (click)="login()">Login</button>
+  <h4 *ngIf="errorMsg.show">{{errorMsg.text}}</h4>
 </section>

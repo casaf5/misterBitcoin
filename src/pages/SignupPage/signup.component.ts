@@ -8,20 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
-  constructor(
-    private userService: UserService,
-    private router: Router
-  ) {}
-  username = '';
+  constructor(private userService: UserService, private router: Router) {}
+  registerUser = '';
+  loginUser='';
+  errorMsg = { show: false, text: 'Cant Find User, Please try again..' };
   signup(): void {
-    if (this.username === '') return;
-    this.userService.signup(this.username);
-    this.router.navigate(['home'])
+    if (this.registerUser === '') return;
+    this.userService.signup(this.registerUser);
+    this.router.navigate(['home']);
   }
-  login():void{
-    if (this.username === '') return;
-    this.userService.login(this.username);
-    this.router.navigate(['home'])
+  login(): void {
+    if (this.loginUser === '') return;
+    const user = this.userService.login(this.loginUser);
+    if (user) this.router.navigate(['home']);
+    else {
+      this.errorMsg.show = true;
+      setTimeout(() => (this.errorMsg.show = false), 3000);
+    }
   }
   ngOnInit(): void {}
 }

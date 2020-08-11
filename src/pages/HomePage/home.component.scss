@@ -1,8 +1,22 @@
 .home-page {
   align-self: start;
   .user-details {
+    margin: 5px;
+    ngx-avatar {
+      align-self: center;
+      margin: 10px;
+    }
     h3 {
-      line-height: 3rem;
+      margin-bottom: 10px;
+      font-size: 20px;
+      i {
+        padding: 10px;
+        font-size: 18px;
+      }
+    }
+    :first-of-type {
+      font-size: 22px;
+      font-weight: bold;
     }
   }
 }

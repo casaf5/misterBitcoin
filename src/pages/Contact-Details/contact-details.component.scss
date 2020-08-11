@@ -1,0 +1,49 @@
+.contact-details {
+  width: 500px;
+  margin: 50px auto;
+  img {
+    width: 150px;
+    align-self: center;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+  .contact-actions {
+    align-self: center;
+    button {
+      background-color: transparent;
+      i {
+        font-size: 20px;
+        margin: 10px;
+        transition: 0.2s all ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  h4{
+      border: 2px solid black;
+      width: 400px;
+      margin:5px;
+      align-self: center;
+      padding:10px;
+      span{
+        font-weight: bold;
+        text-decoration: underline;
+      }
+  }
+  transfer-fund{
+      align-self: center;
+  }
+}
+
+@media (max-width:380px) {
+  .contact-details {
+    width: 350px;
+    h4{
+      width: 350px;
+      font-size: 14px;
+    }
+   
+  }
+}

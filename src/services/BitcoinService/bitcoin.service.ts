@@ -621,11 +621,22 @@ export class BitcoinService {
   constructor(private http: HttpClient) {}
   getRate(value: number, currency: string): Observable<number> {
     const url = `${this.rateUrl}currency=${currency}&value=${value}`;
-    console.log(url);
     return this.http.get<number>(url);
   }
   getMarketPrice() {
-    return marketPriceChartData;
+    const url =
+      'https://api.blockchain.info/charts/market-price?timespan=5months&format=json&cors=true';
+    return this.http.get(url);
+  }
+  getAvgBlockSize() {
+    const url =
+      'https://api.blockchain.info/charts/avg-block-size?timespan=5months&format=json&cors=true';
+    return this.http.get(url);
+  }
+  getTradeVolume() {
+    const url =
+      'https://api.blockchain.info/charts/trade-volume?timespan=5months&format=json&cors=true';
+    return this.http.get(url);
   }
   getConfirmedTransactions() {}
 }

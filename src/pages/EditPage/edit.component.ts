@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Contact } from 'src/models/contact.model';
 import { ContactService } from 'src/services/ContactService/contact.service';
 import { Location } from '@angular/common';
@@ -12,7 +12,8 @@ import { Location } from '@angular/common';
 export class EditComponent implements OnInit {
   contactToEdit: Contact;
   constructor(
-    private route: ActivatedRoute,
+    private router: Router,
+    private activeRoute: ActivatedRoute,
     private contactService: ContactService,
     private location: Location
   ) {}
@@ -22,10 +23,16 @@ export class EditComponent implements OnInit {
   }
   removeContact(): void {
     this.contactService.deleteContact(this.contactToEdit._id);
-    this.location.go('contact')
+    this.toContacts();
+  }
+  toContacts(): void {
+    this.router.navigate(['contact']);
+  }
+  get pageTitle(): string {
+    return this.contactToEdit._id ? 'Edit Contact' : 'Add New Contact';
   }
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
+    this.activeRoute.params.subscribe((params) => {
       if (params.id) {
         this.contactService
           .getContactById(params.id)

@@ -13,25 +13,19 @@ const USERS = [
     moves: [
       {
         from_id: 'IDJSFISDJ23949DSFJ',
-        to_name: 'YOU CANT SEE ME',
+        to_name: 'Elton John',
         amount: 50,
         completedAt: 1597149688592,
       },
       {
         from_id: 'IDJSFISDJ23949DSFJ',
-        to_name: 'Faulkner Flores',
+        to_name: 'Ross Geller',
         amount: 50,
         completedAt: 1597149688592,
       },
       {
         from_id: 'IDJSFISDJ23949DSFJ',
-        to_name: 'Faulkner Flores',
-        amount: 50,
-        completedAt: 1597149688592,
-      },
-      {
-        from_id: 'IDJSFISDJ23949DSFJ',
-        to_name: 'BUT ME YOU CAN',
+        to_name: 'Bob Marley',
         amount: 50,
         completedAt: 1597149688592,
       },
@@ -44,7 +38,7 @@ const USERS = [
 export class UserService {
   private _users: User[] = Utils.loadFromLocal('users') || USERS;
   // private _users: User[] = USERS;
-  public loggedUser: User = Utils.loadFromLocal('loggedUser') || null;
+  public loggedUser: User = Utils.loadFromLocal('loggedUser') || USERS[0];
   constructor() {}
   getUser(_id: string): User {
     const user = this._users.find((user) => user._id === _id);
@@ -58,7 +52,7 @@ export class UserService {
       completedAt: Date.now(),
     };
     this.loggedUser.coins -= amount;
-    this.loggedUser.moves.push(transferAction);
+    this.loggedUser.moves.unshift(transferAction);
     Utils.saveToLocal('loggedUser', this.loggedUser);
     const idx = this._users.findIndex((u) => u._id === this.loggedUser._id);
     this._users.splice(idx, 0, this.loggedUser);

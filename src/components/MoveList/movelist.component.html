@@ -1,9 +1,13 @@
 <section class="move-list">
+  <h2><i class="fas fa-retweet"></i> Your Last Moves:</h2>
   <ul>
     <li *ngFor="let move of moves">
-      <pre>
-                {{ move | json }}
-      </pre>
+      <i class="far fa-arrow-alt-circle-up"></i>
+      <h6>Sent</h6>
+      <h3><span><i class="fas fa-user"></i>To:</span> {{ move.to_name }}</h3>
+      <h3><span><i class="fas fa-clock"></i>At: </span>{{ move.completedAt |date:'medium'}}</h3>
+      <h3><span><i class="fab fa-bitcoin"></i>Amount:</span> {{ move.amount }}</h3>
     </li>
   </ul>
+  <h3 class="noMovesTag" *ngIf="noMoves">No Moves Yet,Start Sharing :)</h3>
 </section>

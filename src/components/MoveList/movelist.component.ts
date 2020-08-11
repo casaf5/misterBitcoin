@@ -9,8 +9,8 @@ import { Move } from 'src/interfaces/move.interface';
 export class MovelistComponent implements OnInit {
   @Input() moves: Move[];
   constructor() {}
-
-  ngOnInit(): void {
-    console.log(this.moves)
+  get noMoves() {
+    return this.moves.length === 0;
   }
+  ngOnInit(): void {}
 }

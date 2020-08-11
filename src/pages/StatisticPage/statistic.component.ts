@@ -8,8 +8,7 @@ import { from } from 'rxjs';
   styleUrls: ['./statistic.component.scss'],
 })
 export class StatisticComponent implements OnInit {
-  chartData: any;
-  chartOptions = { height: 800, width: 1200, title: '' };
+  chartData = { tradeVolume: null, avgChart: null, marketPrice: null };
   months: any = [
     'January',
     'Fabruary',
@@ -25,14 +24,27 @@ export class StatisticComponent implements OnInit {
     'December',
   ];
   constructor(private bitcoinService: BitcoinService) {}
-
-  ngOnInit(): void {
-    const data = this.bitcoinService.getMarketPrice();
-    this.chartData = data.values.map((coords, idx) => {
+  buildChart(data) {
+    // console.log('data', data);
+    return data.values.map((coords) => {
       coords.x = parseInt(coords.x + '000');
       let monthIdx = new Date(coords.x).getMonth();
-      return idx % 5 === 0 ? [this.months[monthIdx], coords.y] : ['', coords.y];
+      return [this.months[monthIdx], coords.y];
     });
-    this.chartOptions.title = data.description;
+  }
+  ngOnInit(): void {
+    this.bitcoinService
+      .getAvgBlockSize()
+      .subscribe((data) => (this.chartData.avgChart = this.buildChart(data)));
+    this.bitcoinService
+      .getTradeVolume()
+      .subscribe(
+        (data) => (this.chartData.tradeVolume = this.buildChart(data))
+      );
+    this.bitcoinService
+      .getMarketPrice()
+      .subscribe(
+        (data) => (this.chartData.marketPrice = this.buildChart(data))
+      );
   }
 }
