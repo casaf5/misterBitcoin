@@ -1,0 +1,33 @@
+ul.contact-list {
+  padding: 0;
+  margin: 0;
+  li {
+    border: 1px solid #1a4a97;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.3s ease-in-out;
+    span {
+      margin-left: 10px;
+    }
+    i {
+      transition: all 0.1s ease-in-out;
+      color: lightgrey;
+      &:hover {
+        transform: scale(1.2);
+        color:black;
+      }
+    }
+
+    &:hover {
+      background-color: #1a4a97;
+      span {
+        color: white;
+      }
+    }
+  }
+}

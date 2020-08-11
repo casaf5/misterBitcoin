@@ -1,0 +1,8 @@
+<section class="home-page col-layout">
+  <h3>Welcome - {{ user.name }}</h3>
+  <section class="user-details col-layout">
+    <h3>Coins: {{ user.coins }}</h3>
+    <h3>BTC(1$): {{ currRate }}</h3>
+  </section>
+ <movelist [moves]="lastMoves"></movelist>
+</section>

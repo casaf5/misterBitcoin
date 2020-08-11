@@ -1,0 +1,22 @@
+<section class="contact-list">
+  <ul class="contact-list col-layout">
+    <a routerLink="/edit">
+      <button>Add New Contact<i class="fas fa-user-plus"></i></button>
+    </a>
+    <li *ngFor="let contact of contacts">
+      <a routerLink="/details/{{ contact._id }}">
+        <section class="flex space-between align-center">
+          <ngx-avatar
+            [name]="contact.name"
+            size="35"
+            fgColor="white"
+          ></ngx-avatar>
+          <span>{{ contact.name }}</span>
+          <a routerLink="/edit/{{ contact._id }}">
+            <i class="fas fa-user-edit" title="Edit User"></i>
+          </a>
+        </section>
+      </a>
+    </li>
+  </ul>
+</section>

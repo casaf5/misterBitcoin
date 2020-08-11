@@ -1,0 +1,13 @@
+<section class="edit-page">
+    <i class="fas fa-trash-alt" (click)="removeContact()"></i>
+    <form >
+        <input type="text" name="name" placeholder="Name" [(ngModel)]="contactToEdit.name">
+        <input type="text" name="email" placeholder="email" [(ngModel)]="contactToEdit.email">
+        <input type="text" name="phone" placeholder="phone" [(ngModel)]="contactToEdit.phone">
+        <select name="gender" [(ngModel)]="contactToEdit.gender">
+                <option value="men">Men</option>
+                <option value="women">Women</option>
+        </select>
+        <button (click)="saveContact()">Submit</button>
+    </form>
+</section>

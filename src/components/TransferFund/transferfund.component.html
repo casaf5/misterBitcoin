@@ -1,0 +1,6 @@
+<section class="transfer">
+    <input type="number" placeholder="Coins to Transfer" [(ngModel)]="coinsToTransfer">
+    <button (click)="onTransferCoins()">Transfer</button>
+    <h3 *ngIf="errorMsg">{{ errorMsg }}</h3>
+
+</section>

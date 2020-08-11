@@ -1,0 +1,13 @@
+<section class="contact-details col-layout">
+  <img [src]="contactToShow.profile_pic" />
+  <section class="contact-actions flex">
+    <button (click)="goBack()"><i class="fas fa-arrow-circle-left"></i></button>
+    <a routerLink="/edit/{{ contactToShow._id }}">
+      <button><i class="fas fa-user-edit"></i></button>
+    </a>
+  </section>
+  <h4>Name : {{ contactToShow.name }}</h4>
+  <h4>Email : {{ contactToShow.email }}</h4>
+  <h4>Phone : {{ contactToShow.phone }}</h4>
+  <transfer-fund [fromContact]="contactToShow"></transfer-fund>
+</section>
