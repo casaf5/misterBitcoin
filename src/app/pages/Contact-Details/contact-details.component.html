@@ -6,8 +6,14 @@
       <button><i class="fas fa-user-edit"></i></button>
     </a>
   </section>
-  <h4><span>Name</span> : {{ contactToShow.name }}</h4>
-  <h4><span>Email</span> : {{ contactToShow.email }}</h4>
-  <h4><span>Phone</span> : {{ contactToShow.phone }}</h4>
-  <transfer-fund [fromContact]="contactToShow"></transfer-fund>
+  <section class="contact-details flex col">
+    <h4><span>Name</span> : {{ contactToShow.name }}</h4>
+    <h4><span>Email</span> : {{ contactToShow.email }}</h4>
+    <h4><span>Phone</span> : {{ contactToShow.phone }}</h4>
+  </section>
+  <section class="contact-transfer flex col">
+    <h4>Transfer Coins to - {{ contactToShow.name }}</h4>
+    <transfer-fund [fromContact]="contactToShow"></transfer-fund>
+  </section>
+  <movelist [moves]="userTransactions" ></movelist>
 </section>

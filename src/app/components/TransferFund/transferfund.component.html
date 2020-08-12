@@ -1,5 +1,8 @@
-<section class="transfer flex space-around">
-    <input type="number" placeholder="Coins to Transfer" [(ngModel)]="coinsToTransfer">
-    <button (click)="onTransferCoins()">Transfer</button>
-</section>
+<section class="transfer flex col">
+    <form (submit)="onTransferCoins()" class="flex space-between">
+        <input type="number" placeholder="Coins to Transfer" [(ngModel)]="coinsToTransfer" name="amount">
+        <button>Transfer</button>
+    </form>
 <h3 *ngIf="errorMsg">{{ errorMsg }}</h3>
+
+</section>
