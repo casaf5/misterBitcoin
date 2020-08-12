@@ -38,7 +38,7 @@ const USERS = [
 export class UserService {
   private _users: User[] = Utils.loadFromLocal('users') || USERS;
   // private _users: User[] = USERS;
-  public loggedUser: User = Utils.loadFromLocal('loggedUser') || USERS[0];
+  public loggedUser: User = Utils.loadFromLocal('loggedUser') || null;
   constructor() {}
   getUser(_id: string): User {
     const user = this._users.find((user) => user._id === _id);
@@ -72,5 +72,9 @@ export class UserService {
       Utils.saveToLocal('loggedUser', user);
       return this.loggedUser;
     }
+  }
+  logout(): void {
+    this.loggedUser = null;
+    localStorage.removeItem('loggedUser');
   }
 }

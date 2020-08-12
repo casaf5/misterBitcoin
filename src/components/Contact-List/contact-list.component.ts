@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Contact } from 'src/models/contact.model';
+import { UserService } from 'src/services/UserService/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'contact-list',
@@ -8,8 +10,9 @@ import { Contact } from 'src/models/contact.model';
 })
 export class ContactListComponent implements OnInit {
   @Input() contacts: Contact[];
-  constructor() {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
+    if (!this.userService.loggedUser) this.router.navigate(['signup']);
   }
 }

@@ -121,8 +121,13 @@
               "devServerTarget": "ms-bitcoin:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ms-bitcoin"
 }

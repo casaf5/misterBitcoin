@@ -1,8 +1,9 @@
 <header>
-    <nav>
-        <a routerLink="/home">Home</a>
-        <a routerLink="/contact">Contacts</a>
-        <a routerLink="/statistic">Statistics</a>
-        <a routerLink="/signup">Sign Up/Login</a>
-    </nav>
+  <nav>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/contact">Contacts</a>
+    <a routerLink="/statistic">Statistics</a>
+    <a *ngIf="!isLogged" routerLink="/signup">Sign Up/Login</a>
+    <a *ngIf="isLogged" (click)="logout()">Logout</a>
+  </nav>
 </header>

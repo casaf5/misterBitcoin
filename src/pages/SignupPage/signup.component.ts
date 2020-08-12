@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) {}
   registerUser = '';
-  loginUser='';
+  loginUser = '';
   errorMsg = { show: false, text: 'Cant Find User, Please try again..' };
   signup(): void {
     if (this.registerUser === '') return;
@@ -20,8 +20,9 @@ export class SignupComponent implements OnInit {
   login(): void {
     if (this.loginUser === '') return;
     const user = this.userService.login(this.loginUser);
-    if (user) this.router.navigate(['home']);
-    else {
+    if (user) {
+      this.router.navigate(['home']);
+    } else {
       this.errorMsg.show = true;
       setTimeout(() => (this.errorMsg.show = false), 3000);
     }
