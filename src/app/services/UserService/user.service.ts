@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { User } from '../../models/user.model';
-import { Contact } from 'src/models/contact.model';
+import { Contact } from 'src/app/models/contact.model';
 import { Move } from '../../interfaces/move.interface';
 import Utils from '../../utils/utils';
-import utils from '../../utils/utils';
 
 const USERS = [
   {

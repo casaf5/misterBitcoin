@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Contact } from 'src/models/contact.model';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { ContactService } from 'src/services/ContactService/contact.service';
+import { ContactService } from 'src/app/services/ContactService/contact.service';
 
 @Component({
   selector: 'contact-details',

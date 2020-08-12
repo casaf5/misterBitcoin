@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserService } from 'src/services/UserService/user.service';
-import { BitcoinService } from 'src/services/BitcoinService/bitcoin.service';
+import { UserService } from 'src/app/services/UserService/user.service';
+import { BitcoinService } from 'src/app/services/BitcoinService/bitcoin.service';
 import { User } from '../../models/user.model';
-import { Move } from 'src/interfaces/move.interface';
 import { THIS_EXPR, IfStmt } from '@angular/compiler/src/output/output_ast';
 import { Router } from '@angular/router';
 

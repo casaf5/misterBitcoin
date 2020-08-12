@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Move } from 'src/interfaces/move.interface';
+import { Move } from 'src/app/interfaces/move.interface';
 
 @Component({
   selector: 'movelist',

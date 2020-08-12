@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BitcoinService } from 'src/services/BitcoinService/bitcoin.service';
+import { BitcoinService } from 'src/app/services/BitcoinService/bitcoin.service';
 import { from } from 'rxjs';
 
 @Component({
