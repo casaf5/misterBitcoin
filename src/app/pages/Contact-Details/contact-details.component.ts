@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { ContactService } from 'src/app/services/ContactService/contact.service';
-import { UserService } from 'src/app/services/UserService/user.service';
+import { ContactService } from 'src/app/services/contact-service/contact.service';
+import { UserService } from 'src/app/services/user-service/user.service';
 import { Move } from 'src/app/interfaces/move.interface';
 import { User } from 'src/app/models/user.model';
 
@@ -31,7 +31,7 @@ export class ContactDetailsComponent implements OnInit {
   }
   get userTransactions(): any[] {
     const user :User= this.userService.loggedUser;
-    return user.moves.filter((move:Move) => move.to_name === this.contactToShow.name);
+    return user.moves.filter((move:Move) => move.toName === this.contactToShow.name);
   }
   ngOnInit(): void {
     this.getContact();

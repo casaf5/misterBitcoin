@@ -1,7 +1,5 @@
 .contact-details {
-  width: 500px;
   margin: 25px auto;
-  align-items: center;
   img {
     width: 150px;
     align-self: center;
@@ -13,8 +11,9 @@
     button {
       background-color: transparent;
       i {
-        font-size: 20px;
+        font-size: 25px;
         margin-top: 10px;
+        color:white;
         transition: 0.2s all ease-in-out;
         &:hover {
           transform: scale(1.2);
@@ -22,49 +21,45 @@
       }
     }
   }
-  .contact-details{
+  .contact-details {
     align-self: center;
-    h4{
-      border: 2px solid black;
+    h4 {
       width: 100%;
-      margin:5px;
-      align-self: center;
-      padding:10px;
+      text-align: center;
+      margin: 5px;
+      padding: 10px;
       font-size: 18px;
-      border-radius: 5px;
+    }
+  }
+  .contact-transfer {
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    align-content: center;
+    justify-content: center;
+    h4 {
+      font-size: 17px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      text-align: center;
+      width: 300px;
       span{
-        font-weight: bold;
-        text-decoration: underline;
+        border-bottom:1px solid white;
       }
+    }
   }
-  }
- .contact-transfer{
-  align-items: center;
-  border:2px solid black;
-  width: 500px;
-  padding:10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  h4{
-    font-size: 17px;
-    font-weight: bold;
-    padding-bottom:10px;
-    text-align: center;
-  }
- }
- 
 }
 
-@media (max-width:380px) {
+@media (max-width: 480px) {
   .contact-details {
     width: 350px;
-    h4{
+    h4 {
       width: 350px;
       font-size: 14px;
     }
-    .contact-transfer{
-      width: 360px;
+    .contact-transfer {
+      width: 340px;
     }
-   
   }
 }

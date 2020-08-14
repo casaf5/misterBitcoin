@@ -3,24 +3,23 @@
   list-style: none;
 }
 html {
-  font-family: "Inter", sans-serif;
+  // font-family: "Inter", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+  color:white;
 }
 body {
   margin: 0;
+  // background-color: #091318;
+  background-color: #091318de;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
   margin: 0 0 0.4em;
   line-height: 1.8;
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 textarea {
   resize: none;
@@ -28,15 +27,16 @@ textarea {
 
 input,
 select {
-  font-family: "Inter", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 button {
   cursor: pointer;
   outline: none;
   border: none;
-  font-family: "Inter", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 a {
   text-decoration: none;
+  text-transform: none;
   color: black;
 }

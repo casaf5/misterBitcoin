@@ -1,0 +1,26 @@
+<section class="container auth-page flex justify-center ">
+  <!-- <h1>Sign Up<i class="fas fa-user-plus"></i></h1>
+  <hr>
+  <h1>Login<i class="fas fa-sign-in-alt"></i></h1>
+  <input type="text" placeholder="Enter your name.." [(ngModel)]="loginUser" />
+  <button (click)="login()">Login</button>
+  <h4 *ngIf="errorMsg.show">{{errorMsg.text}}</h4> -->
+  <section class="signup-form flex col">
+    <h4 class="form-title">Sign Up</h4>
+    <form (submit)="signup()" class="flex col">
+      <input type="text" placeholder="Username" name="username" [(ngModel)]="registerUser.username"/>
+      <input type="text" placeholder="Email" name="email" [(ngModel)]="registerUser.email" />
+      <input type="text" placeholder="Phone" name="email" [(ngModel)]="registerUser.phone" />
+      <button>Sign Up</button>
+    </form>
+  </section>
+  <span class="seperator">OR</span>
+  <section class="login-form ">
+    <h4 class="form-title">Login</h4>
+    <form (submit)="login()" class="flex col">
+      <input type="text" placeholder="Username" name="username" [(ngModel)]="loginUser" />
+      <button>Login</button>
+    </form>
+    <h4 *ngIf="errorMsg.show">{{ errorMsg.text }}</h4>
+  </section>
+</section>

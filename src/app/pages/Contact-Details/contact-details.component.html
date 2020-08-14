@@ -1,19 +1,19 @@
-<section class="contact-details flex col">
-  <img [src]="contactToShow.profile_pic" />
+<section class="contact-details container flex col">
+  <img [src]="contactToShow.profilePic" />
   <section class="contact-actions flex">
     <button (click)="goBack()"><i class="fas fa-arrow-circle-left"></i></button>
-    <a routerLink="/edit/{{ contactToShow._id }}">
+    <a routerLink="/contact/edit/{{ contactToShow._id }}">
       <button><i class="fas fa-user-edit"></i></button>
     </a>
   </section>
-  <section class="contact-details flex col">
-    <h4><span>Name</span> : {{ contactToShow.name }}</h4>
-    <h4><span>Email</span> : {{ contactToShow.email }}</h4>
-    <h4><span>Phone</span> : {{ contactToShow.phone }}</h4>
+  <section class="contact-details flex col-layout">
+    <h4> {{ contactToShow.name }}</h4>
+    <h4> {{ contactToShow.email }}</h4>
+    <h4> {{ contactToShow.phone }}</h4>
   </section>
-  <section class="contact-transfer flex col">
-    <h4>Transfer Coins to - {{ contactToShow.name }}</h4>
-    <transfer-fund [fromContact]="contactToShow"></transfer-fund>
+  <section class="container contact-transfer flex col-layout">
+    <h4>Transfer Coins to - <span>{{ contactToShow.name }}</span></h4>
+    <transfer-fund [toContact]="contactToShow"></transfer-fund>
   </section>
-  <movelist [moves]="userTransactions" ></movelist>
+  <move-list [moves]="userTransactions" ></move-list>
 </section>

@@ -1,0 +1,8 @@
+<section class="contacts-page">
+  <a routerLink="/contact/edit">
+    <button><i class="fas fa-user-plus"></i></button>
+  </a>
+  <contact-filter (filtered)="filterContacts($event)"></contact-filter>
+  <contact-list [contacts]="contacts"></contact-list>
+</section>
+

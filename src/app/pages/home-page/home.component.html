@@ -1,0 +1,13 @@
+<section class="home-page flex col">
+  <section class="user-wrapper">
+    <section class="user-details container flex col space-between">
+      <h4 class="user-title">Welcome ,{{ user.name }}</h4>
+      <section class="info flex space-around">
+        <h3><i class="fas fa-coins"></i>Coins: {{ user.coins }}</h3>
+        <h3><i class="far fa-heart-rate"></i>BTC(1$): {{ currRate }}</h3>
+        <h3><i class="fas fa-sync"></i>Total Transactions: {{ user.moves.length }}</h3>
+      </section>
+    </section>
+  </section>
+  <move-list [moves]="user.moves"></move-list>
+</section>

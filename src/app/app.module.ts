@@ -3,28 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactFilterComponent } from '../app/components/ContactFilter/contact-filter.component';
-import { ContactListComponent } from '../app/components/contact-list/contact-list.component';
-import { ContactPreviewComponent } from '../app/components/contact-preview/contact-preview.component';
-import { HomeComponent } from '../app/pages/HomePage/home.component';
-import { ContactComponent } from '../app/pages/ContactPage/contact.component';
+import { ContactFilterComponent } from './components/contact-filter/contact-filter.component';
+import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { HomeComponent } from './pages/home-page/home.component';
+import { ContactComponent } from './pages/contacts-page/contacts.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { UserService } from '../app/services/UserService/user.service';
-import { ContactService } from '../app/services/ContactService/contact.service';
-import { BitcoinService } from '../app/services/BitcoinService/bitcoin.service';
-import { AppheaderComponent } from '../app/components/appheader/appheader.component';
-import { FooterComponent } from '../app/components/AppFooter/footer.component';
-import { StatisticComponent } from '../app/pages/StatisticPage/statistic.component';
-import { ContactDetailsComponent } from '../app/pages/Contact-Details/contact-details.component';
-import { EditComponent } from '../app/pages/EditPage/edit.component';
-import { SignupComponent } from '../app/pages/SignupPage/signup.component';
-import { MovelistComponent } from '../app/components/MoveList/movelist.component';
-import { TransferfundComponent } from '../app/components/TransferFund/transferfund.component';
+import { UserService } from './services/user-service/user.service';
+import { ContactService } from './services/contact-service/contact.service';
+import { BitcoinService } from './services/bitcoin-service/bitcoin.service';
+import { AppheaderComponent } from './components/app-header/app-header.component';
+import { FooterComponent } from './components/app-footer/app-footer.component';
+import { StatisticComponent } from './pages/statistic-page/statistic.component';
+import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
+import { EditComponent } from 'src/app/pages/contact-edit-page/contact-edit.component';
+import { SignupComponent } from './pages/signup-page/signup.component';
+import { MovelistComponent } from './components/move-list/move-list.component';
+import { TransferfundComponent } from './components/transfer-fund/transfer-fund.component';
 import { FormsModule } from '@angular/forms';
+
 
 //OTHER:
 import { GoogleChartsModule } from 'angular-google-charts';
+import { ChartsModule } from 'ng2-charts';
 import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
@@ -32,7 +33,6 @@ import { AvatarModule } from 'ngx-avatar';
     AppComponent,
     ContactFilterComponent,
     ContactListComponent,
-    ContactPreviewComponent,
     HomeComponent,
     ContactComponent,
     AppheaderComponent,
@@ -51,6 +51,7 @@ import { AvatarModule } from 'ngx-avatar';
     GoogleChartsModule,
     FormsModule,
     AvatarModule,
+    ChartsModule,
   ],
   providers: [UserService, ContactService, BitcoinService],
   bootstrap: [AppComponent],

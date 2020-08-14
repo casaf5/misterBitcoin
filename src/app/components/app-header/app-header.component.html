@@ -1,0 +1,14 @@
+<header class="container flex space-between align-center">
+  <section class="logo">
+    <img
+      src="../../../assets/images/bitcoin.svg"
+    />
+  </section>
+  <nav>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/contacts">Contacts</a>
+    <a routerLink="/statistic">Statistics</a>
+    <a *ngIf="!isLogged" routerLink="/signup">Sign Up/Login</a>
+    <button class="login-btn" *ngIf="isLogged" (click)="logout()">Logout</button>
+  </nav>
+</header>

@@ -1,6 +1,7 @@
 export interface Move {
-  from_id: string;
-  to_name:string;
+  fromId: string;
+  toName: string;
   amount: number;
   completedAt: number;
+  rateAtTransfer:string,
 }

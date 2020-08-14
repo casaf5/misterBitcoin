@@ -2,9 +2,11 @@ import Utils from '../utils/utils';
 export class User {
   constructor(
     public name: string = '',
+    public phone:string='',
+    public email:string='',
     public coins: number = 100,
     public moves: Array<Object> = [],
-    public _id?: string,
+    public _id?: string
   ) {}
 
   setId?() {

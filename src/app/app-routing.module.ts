@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from '../app/pages/HomePage/home.component';
-import { StatisticComponent } from '../app/pages/StatisticPage/statistic.component';
-import { ContactComponent } from '../app/pages/ContactPage/contact.component';
-import {ContactDetailsComponent} from '../app/pages/Contact-Details/contact-details.component'
-import { EditComponent } from 'src/app/pages/EditPage/edit.component';
-import { SignupComponent } from 'src/app/pages/SignupPage/signup.component';
+import { HomeComponent } from './pages/home-page/home.component';
+import { StatisticComponent } from './pages/statistic-page/statistic.component';
+import { ContactComponent } from './pages/contacts-page/contacts.component';
+import {ContactDetailsComponent} from './pages/contact-details/contact-details.component'
+import { EditComponent } from './pages/contact-edit-page/contact-edit.component';
+import { SignupComponent } from 'src/app/pages/signup-page/signup.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'statistic', component: StatisticComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'details/:id', component: ContactDetailsComponent },
-  { path: 'edit/:id', component: EditComponent },
-  { path: 'edit', component: EditComponent },
+  { path: 'contacts', component: ContactComponent },
+  { path: 'contact/details/:id', component: ContactDetailsComponent },
+  { path: 'contact/edit/:id', component: EditComponent },
+  { path: 'contact/edit', component: EditComponent },
   { path: 'signup', component: SignupComponent },
 ];
 

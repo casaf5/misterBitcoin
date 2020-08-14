@@ -1,0 +1,13 @@
+
+<section class="edit-page">
+    <form  class="flex col">
+        <i class="remove fas fa-trash-alt" (click)="removeContact()"></i>
+        <h3>{{pageTitle}}</h3>
+        <i class="back fas fa-arrow-circle-left" (click)="toContacts()"></i>
+        <img [src]="contactToEdit.profilePic" >
+        <input type="text" name="name" placeholder="Name" [(ngModel)]="contactToEdit.name">
+        <input type="text" name="email" placeholder="Email@example.com" [(ngModel)]="contactToEdit.email">
+        <input type="text" name="phone" placeholder="Phone" [(ngModel)]="contactToEdit.phone">
+        <button (click)="saveContact()">Submit</button>
+    </form>
+</section>

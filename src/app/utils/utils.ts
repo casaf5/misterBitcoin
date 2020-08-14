@@ -1,7 +1,8 @@
 export default {
   genID,
-  saveToLocal,
-  loadFromLocal,
+  saveToStorage,
+  loadFromStorage,
+  removeFromStorage,
 };
 function genID(len = 20) {
   var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
@@ -18,9 +19,13 @@ function getRandomInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function saveToLocal(key, value) {
+function saveToStorage(key, value) {
   localStorage.setItem(key, JSON.stringify(value));
 }
-function loadFromLocal(key) {
+function loadFromStorage(key) {
   return JSON.parse(localStorage.getItem(key));
+}
+
+function removeFromStorage(key){
+  localStorage.removeItem(key)
 }
