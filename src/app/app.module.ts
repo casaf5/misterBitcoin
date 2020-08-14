@@ -15,7 +15,7 @@ import { BitcoinService } from './services/bitcoin-service/bitcoin.service';
 import { AppheaderComponent } from './components/app-header/app-header.component';
 import { FooterComponent } from './components/app-footer/app-footer.component';
 import { StatisticComponent } from './pages/statistic-page/statistic.component';
-import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
+import { ContactDetailsComponent } from './pages/contact-details-page/contact-details.component';
 import { EditComponent } from 'src/app/pages/contact-edit-page/contact-edit.component';
 import { SignupComponent } from './pages/signup-page/signup.component';
 import { MovelistComponent } from './components/move-list/move-list.component';

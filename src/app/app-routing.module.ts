@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home-page/home.component';
 import { StatisticComponent } from './pages/statistic-page/statistic.component';
 import { ContactComponent } from './pages/contacts-page/contacts.component';
-import {ContactDetailsComponent} from './pages/contact-details/contact-details.component'
+import {ContactDetailsComponent} from './pages/contact-details-page/contact-details.component'
 import { EditComponent } from './pages/contact-edit-page/contact-edit.component';
 import { SignupComponent } from 'src/app/pages/signup-page/signup.component';
 
