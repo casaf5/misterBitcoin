@@ -15,6 +15,11 @@
         color: white;
         font-size: 24px;
         padding:10px 0 10px 25px;
+        &.error{
+            font-size: 15px;
+            color:red;
+            font-weight: bold;
+        }
     }
     form{
         padding: 10px;
@@ -45,6 +50,7 @@
             color:white;
             &::placeholder{color:white}
         }
+       
     }
    }
    .seperator{
@@ -58,12 +64,7 @@
        color:#73a9ba;
        place-items: center;
    }
-   h4{
-       text-align: center;
-       font-weight: bold;
-       color: red;
-       font-size: 20px;
-   }
+   
 }
 
 @media (max-width:480px) {

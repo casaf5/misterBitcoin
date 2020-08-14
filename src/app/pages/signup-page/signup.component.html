@@ -21,6 +21,6 @@
       <input type="text" placeholder="Username" name="username" [(ngModel)]="loginUser" />
       <button>Login</button>
     </form>
-    <h4 *ngIf="errorMsg.show">{{ errorMsg.text }}</h4>
+    <h4 class="error" *ngIf="errorMsg.show">{{ errorMsg.text }}</h4>
   </section>
 </section>
